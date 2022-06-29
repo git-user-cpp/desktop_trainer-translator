@@ -1,4 +1,5 @@
-# desktop_trainer-translator
+# Application for learning translation (Desktop)
+:boom: This desktop version of the trainer-translator program is implemented for Linux systems. Created to improve foreign language skills :boom:
 
 ## ⚠️ LICENSE ⚠️
 MIT License
