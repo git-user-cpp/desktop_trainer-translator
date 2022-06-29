@@ -22,10 +22,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#include "inc.hpp"
+#include "callback.hpp"
 
 int main()
 {
+    //size constants
     enum
     {
         spacing = 20,
@@ -34,10 +35,9 @@ int main()
         Lfont_size = 20
     };
 
+    //window
     int win_weight = button_w + spacing * 2;
     int win_height = button_h * 5 + spacing * 6;
-
-    //window
     Fl_Window *win = new Fl_Window(win_weight, win_height, "Trainer-translator");
     win->color(fl_rgb_color(25, 25, 25));
 
@@ -75,6 +75,9 @@ int main()
     exit_b->labelfont(FL_COURIER);
     exit_b->labelfont(FL_BOLD);
     exit_b->labelsize(Lfont_size);
+    
+    //callbacks for the buttons
+    exit_b->callback(exit_callback, 0);
 
     win->end();
     win->show();

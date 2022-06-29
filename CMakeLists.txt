@@ -24,7 +24,7 @@ cmake_minimum_required(VERSION 3.23 FATAL_ERROR)
 
 project(trainer)
 
-add_executable(trainer src/main.cpp)
+add_executable(trainer src/main.cpp src/callback.cpp)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
                         CXX_STANDART 11
