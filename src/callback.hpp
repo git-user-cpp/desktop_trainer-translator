@@ -25,5 +25,8 @@ SOFTWARE.
 #pragma once
 #include "inc.hpp"
 
+//function for output info
+void info_callback(Fl_Widget *w, void *);
+
 //function to quit the program
 void exit_callback(Fl_Widget *w, void *);

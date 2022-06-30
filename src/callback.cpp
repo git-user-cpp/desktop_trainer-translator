@@ -24,6 +24,20 @@ SOFTWARE.
 
 #include "callback.hpp"
 
+//function for output info
+void info_callback(Fl_Widget *w, void *)
+{
+    Fl_Window *info_W = new Fl_Window(600, 200, "Info");
+    info_W->color(fl_rgb_color(25, 25, 25));
+
+    Fl_Box *info = new Fl_Box(0, 0, 600, 200, "Creator of the program\nhttps://github.com/git-user-cpp");
+    info->labelsize(20);
+    info->labelcolor(fl_rgb_color(255, 255, 255));
+
+    info_W->end();
+    info_W->show();
+}
+
 //function to quit the program
 void exit_callback(Fl_Widget *w, void *)
 {
