@@ -78,6 +78,7 @@ int main()
     
     //callbacks for the buttons
     exit_b->callback(exit_callback, 0);
+    info->callback(info_callback, 0);
 
     win->end();
     win->show();

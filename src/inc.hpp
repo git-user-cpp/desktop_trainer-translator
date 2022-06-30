@@ -29,3 +29,4 @@ SOFTWARE.
 #include <FL/Fl_Box.H>
 #include <FL/Fl_Button.H>
 #include <FL/Fl_Input.H>
+#include <FL/Fl_Output.H>
