@@ -26,6 +26,7 @@ SOFTWARE.
 
 int main()
 {
+    setlocale(LC_ALL,"ua");
     //size constants
     enum
     {
@@ -77,8 +78,9 @@ int main()
     exit_b->labelsize(Lfont_size);
     
     //callbacks for the buttons
-    exit_b->callback(exit_callback, 0);
+    output_words->callback(output_callback, 0);
     info->callback(info_callback, 0);
+    exit_b->callback(exit_callback, 0);
 
     win->end();
     win->show();

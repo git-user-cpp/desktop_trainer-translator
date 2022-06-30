@@ -25,6 +25,9 @@ SOFTWARE.
 #pragma once
 #include "inc.hpp"
 
+//function for outputting words
+void output_callback(Fl_Widget *w, void *);
+
 //function for output info
 void info_callback(Fl_Widget *w, void *);
 

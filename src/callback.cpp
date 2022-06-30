@@ -24,6 +24,31 @@ SOFTWARE.
 
 #include "callback.hpp"
 
+//NEED TO FIX (DOESN'T DISPAY CYRILLIC SYMBOLS)
+//function for outputting words
+void output_callback(Fl_Widget *w, void *)
+{
+    Fl_Window *words_W = new Fl_Window(600, 600, "Read");
+    words_W->color(fl_rgb_color(25, 25, 25));
+
+    Fl_Text_Display *disp = new Fl_Text_Display(0, 0, 600, 600);
+    Fl_Text_Buffer *buff = new Fl_Text_Buffer;
+
+    buff->loadfile("text.txt", 510);
+    std::cout << buff->input_file_was_transcoded << std::endl;
+
+    disp->box(FL_FLAT_BOX);
+    disp->buffer(buff);
+    disp->color(fl_rgb_color(25, 25, 25));
+    disp->textsize(15);
+    disp->textfont(FL_COURIER);
+    disp->textfont(FL_BOLD);
+    disp->textcolor(fl_rgb_color(255, 255, 255));
+
+    words_W->end();
+    words_W->show();
+}
+
 //function for output info
 void info_callback(Fl_Widget *w, void *)
 {
@@ -33,6 +58,8 @@ void info_callback(Fl_Widget *w, void *)
     Fl_Box *info = new Fl_Box(0, 0, 600, 200, "Creator of the program\nhttps://github.com/git-user-cpp");
     info->labelsize(20);
     info->labelcolor(fl_rgb_color(255, 255, 255));
+    info->labelfont(FL_COURIER);
+    info->labelfont(FL_BOLD);
 
     info_W->end();
     info_W->show();
