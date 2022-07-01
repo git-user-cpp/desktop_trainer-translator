@@ -26,6 +26,8 @@ SOFTWARE.
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <algorithm>
+#include <ctime>
 #include <FL/Fl.H>
 #include <FL/Fl_Window.H>
 #include <FL/Fl_Box.H>
