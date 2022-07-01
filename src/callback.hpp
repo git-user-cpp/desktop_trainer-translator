@@ -23,7 +23,10 @@ SOFTWARE.
 */
 
 #pragma once
-#include "word.hpp"
+#include "functionality.hpp"
+
+//function for testing
+void test_callback(Fl_Widget *w, void *);
 
 //function for outputting words
 void output_callback(Fl_Widget *w, void *);

@@ -23,6 +23,31 @@ SOFTWARE.
 */
 
 #include "callback.hpp"
+//function for testing
+void test_callback(Fl_Widget *w, void *)
+{
+    srand(time(NULL));
+
+    Fl_Window *words_W = new Fl_Window(600, 600, "Test");
+    words_W->color(fl_rgb_color(25, 25, 25));
+
+    Fl_Text_Display *disp = new Fl_Text_Display(0, 0, 600, 600);
+    Fl_Text_Buffer *buff = new Fl_Text_Buffer;
+    buff->text("Write a word on English:");
+
+    std::vector<Word> words;
+
+    readData(words);
+
+    words.shrink_to_fit();
+
+    random_shuffle(begin(words), end(words));
+
+    // test(words);
+
+    words_W->end();
+    words_W->show();
+}
 
 //NEED TO FIX (DOESN'T DISPAY CYRILLIC SYMBOLS)
 //function for outputting words

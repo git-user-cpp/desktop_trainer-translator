@@ -78,6 +78,7 @@ int main()
     exit_b->labelsize(Lfont_size);
     
     //callbacks for the buttons
+    test->callback(test_callback, 0);
     output_words->callback(output_callback, 0);
     info->callback(info_callback, 0);
     exit_b->callback(exit_callback, 0);
