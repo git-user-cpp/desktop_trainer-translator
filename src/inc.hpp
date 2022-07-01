@@ -25,6 +25,7 @@ SOFTWARE.
 #pragma once
 #include <iostream>
 #include <fstream>
+#include <vector>
 #include <FL/Fl.H>
 #include <FL/Fl_Window.H>
 #include <FL/Fl_Box.H>

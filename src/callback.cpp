@@ -34,7 +34,7 @@ void output_callback(Fl_Widget *w, void *)
     Fl_Text_Display *disp = new Fl_Text_Display(0, 0, 600, 600);
     Fl_Text_Buffer *buff = new Fl_Text_Buffer;
 
-    buff->loadfile("text.txt", 510);
+    buff->loadfile("text.txt", 1024);
     std::cout << buff->input_file_was_transcoded << std::endl;
 
     disp->box(FL_FLAT_BOX);
