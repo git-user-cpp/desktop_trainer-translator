@@ -66,32 +66,33 @@ void readData(std::vector<Word> &vec)
         }
 }
 
+//NEED TO BE IMPLEMENTED
 //function for testing
-// void test(std::vector<Word> &vec)
-// {
-//     std::string answer;
-//     int score = 0;
+void test(std::vector<Word> &vec)
+{
+    Fl_Window *words_W = new Fl_Window(600, 115, "Test");
+    words_W->color(fl_rgb_color(25, 25, 25));
 
-//     for(auto &element : vec)
-//     {
-//         std::cout << "| Write a word on English: ";
-//         std::cout << element.Get_translation() << std::endl;
-//         std::cout << "| Your answer: ";
-//         getline(std::cin, answer);
+    Fl_Text_Display *disp = new Fl_Text_Display(0, 0, 600, 75);
+    Fl_Text_Buffer *buff = new Fl_Text_Buffer;
 
-//         //lambda function for evaluation
-//         auto result = [&]()
-//         {
-//             if(answer == element.Get_word()) //if the answer is equivalent to a word, the score increases
-//             {
-//                 score++;
-//             }
-//         };
-//         result(); //calling the lambda function
-//     }
-    
-//     //derivation of the general estimation
-//     std::cout   << " _____________________________________________________________" << std::endl
-//                 << "| Your mark is: " << score << "/" << vec.size() << std::endl
-//                 << "|_____________________________________________________________" << std::endl;
-// }
+    Fl_Input *inp = new Fl_Input(215, 75, 300, 25, "Your answer:");
+    inp->color((fl_rgb_color(255, 255, 255)));
+    inp->labelcolor(fl_rgb_color(255, 255, 255));
+    inp->labelsize(15);
+    inp->labelfont(FL_COURIER);
+    inp->labelfont(FL_BOLD);
+
+    buff->text("Text");
+
+    disp->box(FL_FLAT_BOX);
+    disp->buffer(buff);
+    disp->color(fl_rgb_color(25, 25, 25));
+    disp->textsize(15);
+    disp->textfont(FL_COURIER);
+    disp->textfont(FL_BOLD);
+    disp->textcolor(fl_rgb_color(255, 255, 255));
+
+    words_W->end();
+    words_W->show();
+}
