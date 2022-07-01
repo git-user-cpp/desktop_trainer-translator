@@ -23,13 +23,35 @@ SOFTWARE.
 */
 
 #pragma once
-#include "word.hpp"
+#include "inc.hpp"
 
-//function for outputting words
-void output_callback(Fl_Widget *w, void *);
+struct MyStructure
+{
+    std::string word, w_translation;
+};
 
-//function for output info
-void info_callback(Fl_Widget *w, void *);
+class Word
+{
+private:
+    MyStructure words;
 
-//function to quit the program
-void exit_callback(Fl_Widget *w, void *);
+public:
+
+    Word();
+
+    //overloaded two-parameterized constructor
+    Word(std::string str1, std::string str2);
+
+    ~Word();
+
+    //for data entry
+    void DataEntry(std::string str1, std::string str2);
+
+    //setters
+    void Set_word(char w[]);
+    void Set_translation(char w[]);
+
+    //getters
+    std::string Get_word();
+    std::string Get_translation();
+};
